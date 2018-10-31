@@ -1,0 +1,41 @@
+@import "mixin.scss";
+@import "common.scss";
+img {
+    width: 100%
+}
+
+.box {
+    @include box_flex;
+    @include direction(column);
+    font-size: pxTorem(14px);
+}
+
+header {
+    width: 100%;
+    h2 {
+        height: pxTorem(45px);
+        line-height: pxTorem(45px);
+        color: palevioletred;
+        text-align: center;
+    }
+    .bg {
+        color: palevioletred;
+        border-bottom: 1px solid palevioletred;
+    }
+    .iscroll {
+        width: 100%;
+        padding: pxTorem(10px);
+        @include sizing;
+        overflow-x: scroll;
+        ul {
+            width: 100%;
+            @include box_flex;
+            li {
+                width: 30%;
+                height: pxTorem(45px);
+                line-height: pxTorem(45px);
+                text-align: center;
+            }
+        }
+    }
+}
