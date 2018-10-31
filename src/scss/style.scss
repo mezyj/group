@@ -39,3 +39,25 @@ header {
         }
     }
 }
+
+section {
+    overflow-y: auto;
+    h2 {
+        height: pxTorem(45px);
+        line-height: pxTorem(45px);
+        text-align: center;
+    }
+    .list {
+        width: 100%;
+        // overflow-x: scroll;
+        @include box_flex;
+        padding: pxTorem(10px);
+        @include sizing;
+        @include flexWrap(wrap);
+        li {
+            width: 50%;
+            padding: pxTorem(5px);
+            @include sizing;
+        }
+    }
+}
